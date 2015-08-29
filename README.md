@@ -13,4 +13,4 @@ C++ with OpenCV is used. Qt for Interface.
 ### For Mobile App
 Android is used. IDE - eclipse
 
-## To use this: just clone this and simply run the programs.
+### To use this: just clone this and simply run the programs.
