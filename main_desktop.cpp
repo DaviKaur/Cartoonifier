@@ -14,7 +14,7 @@ int main()
         {
                 cout<<"Error:Image cannot be loaded..!!"<<endl;
                 system("pause");   //wait for a key press
-                return -1;
+               // return -1;
         }
 
         namedWindow("MyWindow", CV_WINDOW_NORMAL);  //create a window with name "MyWindow"
