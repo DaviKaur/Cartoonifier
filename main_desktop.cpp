@@ -9,12 +9,15 @@ using namespace std;
 
 int main()
 {
-        Mat img = imread("me.jpg", CV_LOAD_IMAGE_UNCHANGED); //read the image data in the file "me.jpg" and store it in 'img'
+	//read the image data in the file "me.jpg" and store it in 'img'
+        Mat img = imread("me.jpg", CV_LOAD_IMAGE_UNCHANGED); 
 
-        if(img.empty()) //check whether the image is loaded or not
+	//check whether the image is loaded or not
+        if(img.empty()) 
         {
                 cout<<"Error:Image cannot be loaded..!!"<<endl;
-                system("pause");   //wait for a key press
+		//wait for a key press
+                system("pause");   
                // return -1;
         }
 	
@@ -23,7 +26,8 @@ int main()
 	namedWindow("MyWindow", CV_WINDOW_AUTOSIZE);
 	namedWindow("MyWindow2", CV_WINDOW_AUTOSIZE);	
 
-        imshow("OriginalWindow", img);   //display the image which is stored in the 'img' in the "MyWindow" window
+	//display the image which is stored in the 'img' in the "MyWindow" window
+        imshow("OriginalWindow", img);   
 
 		
 	Mat gray;
@@ -63,12 +67,12 @@ int main()
 	}
 
 	Mat bigImg;
-	Mat mask2;
+	Mat mask1;
 	resize(smallImg, bigImg, size, 0, 0, INTER_LINEAR);
 
-	bigImg.copyTo(mask2);
+	bigImg.copyTo(mask1);
 
-	imshow("MyWindow2", mask2);
+	imshow("MyWindow2", mask1);
 
         waitKey(0);   //wait infinite time for a keypress
         destroyWindow("MyWindow");  //destroy the window with the name, "MyWindow"
